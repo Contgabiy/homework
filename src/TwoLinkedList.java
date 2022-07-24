@@ -41,7 +41,7 @@ class LinkedList<T> {
     public LinkedList() {
 
     }
-
+    //增加数据
     public void insert(LinkedList head, LinkedList data) {
         LinkedList i = head;
         while (i.nextData != null) {
@@ -50,7 +50,7 @@ class LinkedList<T> {
         i.nextData = data;
         System.out.println("添加成功!");
     }
-
+    //删除数据
     public void delete(LinkedList head, LinkedList data) {
         if (!find(head, data)) {
             throw new RuntimeException("该数据不存在！");
@@ -70,7 +70,7 @@ class LinkedList<T> {
             i = i.nextData;
         }
     }
-
+    //查找数据
     public boolean find(LinkedList head, LinkedList data) {
         LinkedList i = head;
         int s = 0;
@@ -82,7 +82,7 @@ class LinkedList<T> {
         }
         return false;
     }
-
+    //遍历数据
     public void traverse(LinkedList head) {
         while (head != null) {
             System.out.print(head.data + " ");
@@ -90,7 +90,7 @@ class LinkedList<T> {
         }
         System.out.println();
     }
-
+    //翻转数据
     public LinkedList flip(LinkedList head) {
         LinkedList pre = null;
         LinkedList next = null;
